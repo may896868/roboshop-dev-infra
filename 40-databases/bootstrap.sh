@@ -13,13 +13,14 @@ dnf install ansible -y
 # ansible-pull -U https://github.com/may896868/ansible-roboshop-roles-tf.git -e component=$component main.yaml
 #ansible-pull -U https://github.com/may896868/ansible-roboshop-roles-tf.git mongodb.yaml
 
-REPO_URL=https://github.com/may896868/ansible-roboshop-roles-tf.git
+REPO_URL=https://github.com/daws-86s/ansible-roboshop-roles-tf.git
 REPO_DIR=/opt/roboshop/ansible
 ANSIBLE_DIR=ansible-roboshop-roles-tf
 
 mkdir -p $REPO_DIR
 mkdir -p /var/log/roboshop/
 touch ansible.log
+
 cd $REPO_DIR
 
 # check if ansible repo is already cloned or not
@@ -33,4 +34,4 @@ else
     cd $ANSIBLE_DIR
 fi
 
-ansible-playbook -e component=$component -e environment=$environment main.yaml
+ansible-playbook -e component=$component -e env=$environment main.yaml
