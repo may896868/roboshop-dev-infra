@@ -20,6 +20,7 @@ ANSIBLE_DIR=ansible-roboshop-roles-tf
 mkdir -p $REPO_DIR
 mkdir -p /var/log/roboshop/
 touch ansible.log
+cd $REPO_DIR
 
 # check if ansible repo is already cloned or not
 
