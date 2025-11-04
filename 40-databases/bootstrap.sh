@@ -35,3 +35,4 @@ else
 fi
 
 ansible-playbook -e component=$component -e tire=$environment main.yaml
+
